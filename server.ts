@@ -104,11 +104,11 @@ const trackerServer = new TrackerServer({
 })
 
 trackerServer.on('error', function (err) {
-  logger.error(err)
+  logger.error('Error in websocket tracker.', err)
 })
 
 trackerServer.on('warning', function (err) {
-  logger.error(err)
+  logger.error('Warning in websocket tracker.', err)
 })
 
 const server = http.createServer(app)
